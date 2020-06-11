@@ -22,6 +22,20 @@ The main parts of the project are:
 * ui.content: contains sample content using the components from the ui.apps
 * ui.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
 * ui.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
+=======
+# WKND Events SPA Editor Project
+
+This is the code companion for a tutorial that walks through the process of setting up an AEM project to leverage the Single Page App or SPA Editor feature.
+
+## Modules
+
+The main parts of the template are:
+
+* react-app: a webpack project for the React application. The App is built and deployed to AEM in the form of a client library via the ui.apps module. see the README beneath the react-app for more details.
+* core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
+* ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates, runmode specific configs as well as Hobbes-tests
+* ui.content: contains sample content using the components from the ui.apps
+>>>>>>> wknd-events
 
 ## How to build
 
@@ -36,6 +50,7 @@ If you have a running AEM instance you can build and package the whole project a
 Depending on your maven configuration, you may find it helpful to force the resolution of the Adobe public repo with
 
     mvn clean install -PautoInstallPackage -Padobe-public
+=======
     
 Or to deploy it to a publish instance, run
 
@@ -66,6 +81,16 @@ There are three levels of testing contained in the project:
     ```
 
 * client-side Hobbes.js tests: JavaScript-based browser-side tests that verify browser-side behavior. To test, go in the browser, open the page in 'Developer mode', open the left panel and switch to the 'Tests' tab and find the generated 'MyName Tests' and run them.
+=======
+    mvn clean test
+
+* server-side integration tests: this allows to run unit-like tests in the AEM-environment, ie on the AEM server. To test, execute:
+
+    mvn clean verify -PintegrationTests
+
+* client-side Hobbes.js tests: JavaScript-based browser-side tests that verify browser-side behavior. To test:
+
+    in the browser, open the page in 'Developer mode', open the left panel and switch to the 'Tests' tab and find the generated 'MyName Tests' and run them.
 
 
 ## Maven settings

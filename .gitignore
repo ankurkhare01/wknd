@@ -16,7 +16,10 @@ local.properties
 
 # Eclipse Core
 .project
+<<<<<<< HEAD
 MANIFEST.MF
+=======
+>>>>>>> wknd-events
 
 # External tool builders
 .externalToolBuilders/
@@ -42,6 +45,11 @@ MANIFEST.MF
 # TeXlipse plugin
 .texlipse
 
+<<<<<<< HEAD
+=======
+# Visual Studio Code
+.vscode
+>>>>>>> wknd-events
 
 ### Java ###
 *.class
@@ -59,6 +67,7 @@ hs_err_pid*
 
 # Mac OS #
 .DS_Store
+=======
 
 ### Maven ###
 target/
@@ -80,3 +89,6 @@ buildNumber.properties
 
 ### Visual Studio ###
 .vscode
+=======
+### MacOS ###
+.DS_Store
