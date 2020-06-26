@@ -37,7 +37,7 @@ The main parts of the template are:
 * ui.content: contains sample content using the components from the ui.apps
 >>>>>>> wknd-events
 
-## How to build
+## How to build test
 
 To build all the modules run in the project root directory the following command with Maven 3:
 
